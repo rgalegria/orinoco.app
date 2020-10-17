@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="description"
+            content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+        />
+
+        <title>Orinoco - Votre Commande</title>
+
+        <!-- Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+        <link rel="manifest" href="../site.webmanifest" />
+        <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5100ff" />
+        <meta name="msapplication-TileColor" content="#5100ff" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet" />
+
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/a44570b978.js" crossorigin="anonymous"></script>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="../css/main-min.css" />
+
+        <!-- Javascript -->
+        <script src="../js/confirmation-min.js" defer></script>
+    </head>
+    <body>
+        <div class="confirmation">
+            <header class="confirmation__wrap">
+                <h1 class="confirmation__title">merci beaucoup pour votre achat</h1>
+                <div class="confirmation__icon"><i class="fas fa-check"></i></div>
+            </header>
+            <article class="confirmation__wrap">
+                <h2 class="confirmation__subtitle">
+                    Votre paiement de
+                    <span id="total-price" class="confirmation__price"></span>
+                    a été validé par votre banque
+                </h2>
+                <p class="confirmation__message">Votre numéro de commande c'est :</p>
+                <span id="order-id" class="confirmation__code"></span>
+                <p class="confirmation__summary">
+                    Sous-peu, vous recevrez un email avec votre récapitulatif d’achat sur votre e-mail
+                </p>
+                <img
+                    class="confirmation__logo"
+                    src="../img/logo-orinoco-appareils-photo-vintage.png"
+                    alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
+                />
+            </article>
+            <footer class="confirmation__footer">
+                <div class="underlinedgrey-btn confirmation__return-btn">
+                    <a class="underlinedgrey-btn__link" href="../product-list/">retourner au site</a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+            name="description"
+            content="Le site web pour retrouver les meilleurs références en appareils photo vintage."
+        />
+        <title>Orinoco-Panier</title>
+
+        <!-- Favicons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png" />
+        <link rel="manifest" href="../site.webmanifest" />
+        <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5100ff" />
+        <meta name="msapplication-TileColor" content="#5100ff" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Rich Card -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Store",
+                "name": "Orinoco Appareils Photo",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "7 Cité Paradis",
+                    "addressLocality": "Paris",
+                    "addressRegion": "",
+                    "postalCode": "75010"
+                },
+                "image": "rgalegria.github.io/orinoco/favicon-32x32.png",
+                "email": "shop@orinoco.fr",
+                "telePhone": "+33 1 23 45 67 89",
+                "url": "rgalegria.github.io/orinoco",
+                "openingHours": "Mo,Tu,We,Th,Fr 09:00-19:00",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "09:00",
+                        "closes": "19:00"
+                    }
+                ],
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "48.874798",
+                    "longitude": "2.350510"
+                },
+                "priceRange": "$"
+            }
+        </script>
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Oswald:300,500,700&display=swap" rel="stylesheet" />
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet" />
+
+        <!-- Font-awesome -->
+        <script src="https://kit.fontawesome.com/a44570b978.js" crossorigin="anonymous" defer></script>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="../css/main-min.css" />
+
+        <!-- Javascript -->
+        <script src="../js/cart-min.js" defer></script>
+        <script src="../js/form-min.js" defer></script>
+    </head>
+
+    <body>
+        <main class="payment">
+            <!--Form-->
+            <form id="payment-details" class="payment__form">
+                <div class="payment__details-wrap">
+                    <!-- Payment Details -->
+                    <article class="details">
+                        <!-- Logo -->
+                        <header class="details__logo">
+                            <a class="details__logo__link" href="../index.html">
+                                <img
+                                    src="../img/logo-orinoco-appareils-photo-vintage.png"
+                                    alt="Logo de Orinoco, e-commerce d'appareils photo vintage"
+                                />
+                            </a>
+                        </header>
+
+                        <!-- Contact Form-->
+                        <label for="email">Information de contact</label>
+                        <div class="details__contact">
+                            <input
+                                id="email"
+                                class="form-control form__box"
+                                type="email"
+                                placeholder="E-mail"
+                                required
+                            />
+                            <label class="new-checkbox"
+                                >Souscrivez à notre newsletter
+                                <input id="newsletter" type="checkbox" name="newsletter" value="subscribe" />
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+
+                        <!--Address Form-->
+                        <label for="name">Adresse de livraison</label>
+                        <div class="details__address">
+                            <input
+                                id="last-name"
+                                class="form-control form__box"
+                                type="text"
+                                name="lastname"
+                                minlength="2"
+                                maxlength="30"
+                                autocomplete="family-name"
+                                placeholder="Nom"
+                                required
+                            />
+                            <input
+                                id="first-name"
+                                class="form-control form__box"
+                                type="text"
+                                name="name"
+                                minlength="2"
+                                maxlength="30"
+                                autocomplete="given-name"
+                                placeholder="Prénom"
+                                required
+                            />
+                            <input
+                                id="address"
+                                class="form-control form__box"
+                                type="text"
+                                name="address"
+                                minlength="6"
+                                maxlength="60"
+                                autocomplete="street-address"
+                                placeholder="Adresse"
+                                required
+                            />
+                            <input
+                                id="address-complement"
+                                class="form-control form__box"
+                                type="text"
+                                name="address-complement"
+                                autocomplete="address-line1"
+                                placeholder="Complément d'adresse"
+                            />
+                            <input
+                                id="zipcode"
+                                class="form-control form__box"
+                                type="text"
+                                inputmode="numeric"
+                                pattern="[0-9]{5}"
+                                min="00000"
+                                max="99999"
+                                name="zipcode"
+                                autocomplete="postal-code"
+                                minlength="4"
+                                maxlength="5"
+                                placeholder="Code postale (75001)"
+                            />
+                            <input
+                                id="city"
+                                class="form-control form__box"
+                                type="text"
+                                name="town"
+                                minlength="1"
+                                maxlength="85"
+                                autocomplete="address-level2"
+                                placeholder="Ville"
+                            />
+                            <input
+                                id="country"
+                                class="form-control form__box"
+                                type="text"
+                                name="country"
+                                autocomplete="country-name"
+                                placeholder="Pays"
+                            />
+                        </div>
+
+                        <!--Payement Card-->
+                        <div>
+                            <label for="name">Mode de paiement</label>
+                            <ul class="details__icons">
+                                <li class="details__icons__item">
+                                    <i class="fab fa-cc-apple-pay"></i>
+                                </li>
+                                <li class="details__icons__item">
+                                    <i class="fab fa-cc-visa"></i>
+                                </li>
+                                <li class="details__icons__item">
+                                    <i class="fab fa-cc-mastercard"></i>
+                                </li>
+                                <li class="details__icons__item">
+                                    <i class="fab fa-cc-amex"></i>
+                                </li>
+                                <li class="details__icons__item">
+                                    <i class="fab fa-cc-paypal"></i>
+                                </li>
+                            </ul>
+
+                            <!--payment details-->
+                            <div class="details__card">
+                                <input
+                                    id="card-owner"
+                                    class="form-control form__box"
+                                    name="owner"
+                                    type="text"
+                                    placeholder="Titulaire"
+                                />
+                                <input
+                                    id="card-number"
+                                    class="form-control form__box"
+                                    pattern="([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9]) ([0-9][0-9][0-9][0-9])"
+                                    inputmode="numeric"
+                                    maxlength="19"
+                                    name="card"
+                                    autocomplete="cc-number"
+                                    placeholder="Numéro de carte (0000 0000 0000 0000)"
+                                />
+                                <input
+                                    id="card-cvv"
+                                    class="form-control form__box"
+                                    type="text"
+                                    name="cvv"
+                                    placeholder="CVV"
+                                    pattern="([1-9][1-9][1-9])"
+                                    inputmode="numeric"
+                                    maxlength="3"
+                                    autocomplete="cc-csc"
+                                />
+                                <input
+                                    id="card-month"
+                                    class="form-control form__box"
+                                    type="text"
+                                    name="month"
+                                    pattern="([0][1-9]|10|11|12)"
+                                    inputmode="numeric"
+                                    maxlength="2"
+                                    placeholder="mm"
+                                />
+                                <input
+                                    id="card-year"
+                                    class="form-control form__box"
+                                    type="text"
+                                    name="year"
+                                    pattern="([2][0-5])"
+                                    inputmode="numeric"
+                                    maxlength="2"
+                                    placeholder="yy"
+                                />
+                            </div>
+                        </div>
+                        <label class="new-checkbox"
+                            >Sauvagarder mes informations pour de futurs achats
+                            <input id="user-details" type="checkbox" name="paymentdetails" value="save" />
+                            <span class="checkmark"></span>
+                        </label>
+                        <footer class="payment__desktop-footer">
+                            <ul class="footer__links">
+                                <li class="footer__links__item">
+                                    <a href="#">Méntions Légales</a>
+                                </li>
+                                <li class="footer__links__item">
+                                    <a href="#">Livraison et retours</a>
+                                </li>
+                                <li class="footer__links__item">
+                                    <a href="#">Aide et information</a>
+                                </li>
+                            </ul>
+                        </footer>
+                    </article>
+                </div>
+
+                <!--Cart-->
+                <div class="payment__cart-wrap">
+                    <article class="cart">
+                        <header class="cart__header">
+                            <h1 class="cart__title">mon panier</h1>
+                            <p class="cart__info">Les articles seront réservés 30 minutes</p>
+                        </header>
+
+                        <!--Cart product-->
+                        <section id="cart-container" class="cart__menu__product"></section>
+
+                        <!--Cart sale-->
+                        <form action="">
+                            <div class="cart__product__promocode">
+                                <input
+                                    aria-label="Code Promo"
+                                    id="sales-code"
+                                    class="form-control form__box cart__product__promocode__input"
+                                    type="text"
+                                    placeholder="Code promo / chèque cadeau"
+                                    disabled
+                                />
+                                <button id="secondary-btn" class="secondary-btn cart__product__promocode__btn" disabled>
+                                    Confirmer
+                                </button>
+                            </div>
+                        </form>
+
+                        <!--Cart subtotals-->
+                        <div class="cart__product__division">
+                            <p class="cart__product__subtotals">
+                                Sous-Total<span id="subtotal-price" class="cart__product__subtotals__price"></span>
+                            </p>
+                            <p class="cart__product__subtotals">
+                                Livraison<span id="shipping-price" class="cart__product__subtotals__price"></span>
+                            </p>
+                            <p class="cart__product__subtotals">
+                                TVA 22%<span id="tax-price" class="cart__product__subtotals__price"></span>
+                            </p>
+                        </div>
+
+                        <!--Cart CTA-->
+                        <div>
+                            <h3 class="cart__product__total">
+                                Total<span id="grand-total" class="cart__product__total__price"></span>
+                            </h3>
+                        </div>
+                        <button id="submit-btn" type="submit" class="submit-btn cart__product__btn">paiement</button>
+                        <div class="underlinedgrey-btn cart__product__return">
+                            <a class="underlinedgrey-btn__link" href="../product-list/">retourner au site</a>
+                        </div>
+                    </article>
+                </div>
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="payment__mobile-footer">
+            <ul class="footer__links">
+                <li class="footer__links__item">
+                    <a href="#">Méntions Légales</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#">Livraison et retours</a>
+                </li>
+                <li class="footer__links__item">
+                    <a href="#">Aide et information</a>
+                </li>
+            </ul>
+        </footer>
+    </body>
+</html>
